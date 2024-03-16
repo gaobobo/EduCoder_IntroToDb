@@ -21,10 +21,10 @@ readonly DownloadSite=${2:-Gitee}
 
 case $DownloadSite in
     Gitee)
-        wget -O /tmp/${LevelCode}.sh https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/v1.0/Scripts/${LevelCode}.sh
+        wget -O /tmp/${LevelCode}.sh https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/Beta/Scripts/${LevelCode}.sh
         ;;
     Github)
-        wget -O /tmp/${LevelCode}.sh https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/V1.0/Scripts/${LevelCode}.sh
+        wget -O /tmp/${LevelCode}.sh https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/Beta/Scripts/${LevelCode}.sh
         ;;
     *)
         echo "Unknown download site: $DownloadSite"
