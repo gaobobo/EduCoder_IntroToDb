@@ -1,5 +1,6 @@
+DROP ROLE lily;
 
-DROP USER lily;
-DROP USER peter;
+CREATE ROLE lily PASSWORD 'lily123@123';
+ALTER ROLE lily CREATEDB ;
 
-CREATE USER peter WITH SYSADMIN PASSWORD 'peter123@123';
+GRANT lily TO gaussdb;
