@@ -1,0 +1,1 @@
+CREATE DATABASE accessdb OWNER gaussdb TEMPLATE template0;
