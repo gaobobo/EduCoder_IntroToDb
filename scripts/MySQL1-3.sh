@@ -9,10 +9,10 @@ mkdir -p /tmp/MySQL1-3
 
 case $DownloadSite in
     Gitee)
-        wget -O /tmp/MySQL1-3/MySQL1-3.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/MySQL1-3/MySQL1-3.sql
+        curl -o /tmp/MySQL1-3/MySQL1-3.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/MySQL1-3/MySQL1-3.sql
         ;;
     Github)
-        wget -O /tmp/MySQL1-3/MySQL1-3.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/MySQL1-3/MySQL1-3.sql
+        curl -o /tmp/MySQL1-3/MySQL1-3.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/MySQL1-3/MySQL1-3.sql
         ;;
     *)
         echo "Unknown download site: $DownloadSite"

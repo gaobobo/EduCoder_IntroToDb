@@ -9,10 +9,10 @@ mkdir -p /tmp/OpenGa1-1
 
 case $DownloadSite in
     Gitee)
-        wget -O /tmp/OpenGa1-1/OpenGa1-1_1.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa1-1/OpenGa1-1_1.sql
+        curl -o /tmp/OpenGa1-1/OpenGa1-1_1.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa1-1/OpenGa1-1_1.sql
         ;;
     Github)
-        wget -O /tmp/OpenGa1-1/OpenGa1-1_1.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa1-1/OpenGa1-1_1.sql
+        curl -o /tmp/OpenGa1-1/OpenGa1-1_1.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa1-1/OpenGa1-1_1.sql
         ;;
     *)
         echo "Unknown download site: $DownloadSite"
