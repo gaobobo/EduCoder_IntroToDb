@@ -21,7 +21,7 @@ case $DownloadSite in
         ;;
 esac
 
-mysql -uroot -p123123 -h127.0.0.1 < /tmp/MySQL1-2/MySQL1-2.sql
+mysql --force -uroot -p123123 -h127.0.0.1 < /tmp/MySQL1-2/MySQL1-2.sql
 
 if [ $? -eq 0 ]; then
     return 0
