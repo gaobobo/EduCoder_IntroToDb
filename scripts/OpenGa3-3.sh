@@ -5,7 +5,7 @@
 
 readonly DownloadSite=${1:-Gitee}
 
-mkdir -p /tmp/scripts/OpenGa3-3.sh
+mkdir -p /tmp/OpenGa3-3
 
 case $DownloadSite in
     Gitee)
