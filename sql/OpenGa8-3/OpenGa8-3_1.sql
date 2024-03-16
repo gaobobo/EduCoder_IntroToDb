@@ -1,0 +1,6 @@
+DROP ROLE lily;
+
+CREATE ROLE lily PASSWORD 'lily123@123';
+ALTER ROLE lily CREATEDB ;
+
+GRANT lily TO gaussdb;

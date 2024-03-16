@@ -1,0 +1,2 @@
+CREATE USER jackson WITH PASSWORD "jackson@123";
+CREATE DATABASE userdb OWNER jackson;

@@ -1,0 +1,1 @@
+ALTER ROLE gaussdb IDENTIFIED BY 'Mypassword@123' REPLACE 'passwd123@123';

@@ -1,0 +1,5 @@
+
+DROP USER lily;
+DROP USER peter;
+
+CREATE USER peter WITH SYSADMIN PASSWORD 'peter123@123';
