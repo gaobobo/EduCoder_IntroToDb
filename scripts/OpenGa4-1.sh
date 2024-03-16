@@ -5,16 +5,16 @@
 
 readonly DownloadSite=${1:-Gitee}
 
-mkdir -p /tmp/OpenGa2-3
+mkdir -p /tmp/OpenGa4-1
 
 case $DownloadSite in
     Gitee)
-        curl -o /tmp/OpenGa2-3/OpenGa2-3_1.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa2-3/OpenGa2-3_1.sql
-        curl -o /tmp/OpenGa2-3/OpenGa2-3_2.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa2-3/OpenGa2-3_2.sql
+        curl -o /tmp/OpenGa4-1/OpenGa4-1_1.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa4-1/OpenGa4-1_1.sql
+        curl -o /tmp/OpenGa4-1/OpenGa4-1_2.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/OpenGa4-1/OpenGa4-1_2.sql
         ;;
     Github)
-        curl -o /tmp/OpenGa2-3/OpenGa2-3_1.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa2-3/OpenGa2-3_1.sql
-        curl -o /tmp/OpenGa2-3/OpenGa2-3_2.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa2-3/OpenGa2-3_2.sql
+        curl -o /tmp/OpenGa4-1/OpenGa4-1_1.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa4-1/OpenGa4-1_1.sql
+        curl -o /tmp/OpenGa4-1/OpenGa4-1_2.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/OpenGa4-1/OpenGa4-1_2.sql
         ;;
     *)
         echo "Unknown download site: $DownloadSite"
@@ -23,10 +23,9 @@ case $DownloadSite in
         ;;
 esac
 
-gsql -d postgres -U gaussdb -W'passwd123@123' -f /tmp/OpenGa2-3/OpenGa2-3_1.sql
-gsql -d postgres -U gaussdb -W'Mypassword@123' -f /tmp/OpenGa2-3/OpenGa2-3_1.sql
+gsql -d postgres -U gaussdb -W'passwd123@123' -f /tmp/OpenGa4-1/OpenGa4-1_1.sql
 
-gsql -d userdb -U jackson -W'jackson@123' -f /tmp/OpenGa2-3/OpenGa2-3_2.sql
+gsql -d testdb -U gaussdb -W'passwd123@123' -f /tmp/OpenGa4-1/OpenGa4-1_2.sql
 
 if [ $? -eq 0 ]; then
     return 0

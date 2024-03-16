@@ -1,6 +1,4 @@
-CREATE TABLE t_emp (
-    id INTEGER,
-    name VARCHAR(32),
-    deptId INT,
-    salary FLOAT
+CREATE TABLE test_table (
+    test_id INTEGER NOT NULL ,
+    test_info CHAR(36)
 );
