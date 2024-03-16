@@ -5,14 +5,14 @@
 
 readonly DownloadSite=${1:-Gitee}
 
-mkdir -p /tmp/MySQL1-3
+mkdir -p /tmp/MySQL1-4
 
 case $DownloadSite in
     Gitee)
-        wget -O /tmp/MySQL1-3/MySQL1-3.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/MySQL1-3/MySQL1-3.sql
+        wget -O /tmp/MySQL1-4/MySQL1-4.sql https://gitee.com/coconut_floss/EduCoder_IntroToDb/raw/main/sql/MySQL1-4/MySQL1-4.sql
         ;;
     Github)
-        wget -O /tmp/MySQL1-3/MySQL1-3.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/MySQL1-3/MySQL1-3.sql
+        wget -O /tmp/MySQL1-4/MySQL1-4.sql https://raw.githubusercontent.com/gaobobo/EduCoder_IntroToDb/main/sql/MySQL1-4/MySQL1-4.sql
         ;;
     *)
         echo "Unknown download site: $DownloadSite"
@@ -21,7 +21,7 @@ case $DownloadSite in
         ;;
 esac
 
-mysql -uroot -p123123 -h127.0.0.1 < /tmp/MySQL1-3/MySQL1-3.sql
+mysql --force -uroot -p123123 -h127.0.0.1 < /tmp/MySQL1-4/MySQL1-4.sql
 
 if [ $? -eq 0 ]; then
     return 0
